@@ -1,0 +1,230 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">audience_impact</span> <span class="lx-label" style="background-color:#C8E6C9;">opinion_statement</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+        **Page 1**
+&quot;&quot;&quot;
+Predator: Badlands - <span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#C8E6C9;">The Worst Hunt in Franchise History</span> 
+If there&#x27;s ever been a ﬁlm that carries the name &quot;Predator&quot; yet <span class="lx-highlight" data-idx="1" style="background-color:#C8E6C9;">completely fails to 
+grasp even the most basic essence of the franchise - its rhythm, atmosphere, or 
+sense of threat</span> - that ﬁlm is undoubtedly Predator: Badlands. At best, it can be 
+described as <span class="lx-highlight" data-idx="2" style="background-color:#C8E6C9;">a failed exercise in mimicking a legend</span> - <span class="lx-highlight" data-idx="3" style="background-color:#C8E6C9;">a ﬁlm devoid of the 
+Predator&#x27;s spirit, menace, and that primal suspense that deﬁned the originals</span>. 
+<span class="lx-highlight" data-idx="4" style="background-color:#C8E6C9;">The director clearly has no understanding of the Predator universe</span>. In an attempt 
+to recreate tension and violence through cheap digital effects and noisy framing, 
+he has only <span class="lx-highlight" data-idx="5" style="background-color:#C8E6C9;">produced visual chaos</span>. Scenes that should feel grand or mysterious 
+are instead ﬁlled with <span class="lx-highlight" data-idx="6" style="background-color:#C8E6C9;">illogical lighting, aimless editing, and an overall lack of 
+visual reasoning</span>. <span class="lx-highlight" data-idx="7" style="background-color:#C8E6C9;">The whole thing feels more like a pretentious student project</span>, 
+where the ﬁlmmaker has <span class="lx-highlight" data-idx="8" style="background-color:#C8E6C9;">confused &quot;personal style&quot; with &quot;visual disorder</span>.&quot; In 
+Badlands, there is <span class="lx-highlight" data-idx="9" style="background-color:#C8E6C9;">no character development, no narrative arc, not even a reason 
+to care about what&#x27;s happening</span>. <span class="lx-highlight" data-idx="10" style="background-color:#C8E6C9;">The characters are so shallow and faceless</span> that 
+by the ﬁlm&#x27;s midpoint, <span class="lx-highlight" data-idx="11" style="background-color:#D2E3FC;">the audience has stopped caring whether they live or die</span>. 
+<span class="lx-highlight" data-idx="12" style="background-color:#C8E6C9;">The dialogue is artiﬁcial, lifeless, and often laughable</span> - <span class="lx-highlight" data-idx="13" style="background-color:#C8E6C9;">as if written by an AI that 
+has never actually seen an action movie</span>. 
+The Predator itself - the symbol of the ultimate hunter - <span class="lx-highlight" data-idx="14" style="background-color:#C8E6C9;">looks more like a person 
+in a plastic Halloween costume</span>. <span class="lx-highlight" data-idx="15" style="background-color:#C8E6C9;">The production design and visual effects are so 
+weak</span> that <span class="lx-highlight" data-idx="16" style="background-color:#C8E6C9;">it constantly feels like a cheap &#x27;90s TV movie</span>. Instead of inspiring fear, 
+the ﬁlm <span class="lx-highlight" data-idx="17" style="background-color:#C8E6C9;">turns the Predator into a visual joke</span> - <span class="lx-highlight" data-idx="18" style="background-color:#C8E6C9;">a creature that no longer frightens, 
+but amuses</span>. 
+<span class="lx-highlight" data-idx="19" style="background-color:#C8E6C9;">The performances are directionless</span>; there&#x27;s <span class="lx-highlight" data-idx="20" style="background-color:#C8E6C9;">no sense of control or dramatic 
+understanding</span>. <span class="lx-highlight" data-idx="21" style="background-color:#C8E6C9;">Every move and reaction feels clichéd and hollow</span>, and in 
+moments meant to evoke fear or tension, <span class="lx-highlight" data-idx="22" style="background-color:#D2E3FC;">the only thing that comes across is 
+confusion</span>. 
+Predator: Badlands <span class="lx-highlight" data-idx="23" style="background-color:#C8E6C9;">isn&#x27;t just a bad movie</span> - it&#x27;s <span class="lx-highlight" data-idx="24" style="background-color:#C8E6C9;">an outright assault on the 
+cinematic legacy of the franchise</span>. The director has proven he <span class="lx-highlight" data-idx="25" style="background-color:#C8E6C9;">neither respects 
+the mythos of Predator nor possesses the ability to create something new within 
+it</span>. He has <span class="lx-highlight" data-idx="26" style="background-color:#C8E6C9;">reduced the Predator brand to the level of a dull YouTube video</span>, 
+<span class="lx-highlight" data-idx="27" style="background-color:#D2E3FC;">squandering both audience trust and studio credibility</span>.
+&quot;&quot;&quot;
+
+**Page 2**
+&quot;&quot;&quot;
+If there&#x27;s any respect left for the name Predator, the ﬁrst step should be <span class="lx-highlight" data-idx="28" style="background-color:#C8E6C9;">removing 
+this director from any future projects - permanently</span>.
+&quot;&quot;&quot;
+
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="28" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/29</span> |
+          Pos <span id="posInfo">[36-71]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "opinion_statement", "text": "The Worst Hunt in Franchise History", "color": "#C8E6C9", "startPos": 36, "endPos": 71, "beforeText": "**Page 1**\n&quot;&quot;&quot;\nPredator: Badlands - ", "extractionText": "The Worst Hunt in Franchise History", "afterText": " \nIf there&#x27;s ever been a \ufb01lm that carries the name &quot;Predator&quot; yet completely fails to \ngrasp even the most basic essence of the franchise - its rhythm", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Predator: Badlands</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">Worst Hunt</span>}</div>"}, {"index": 1, "class": "opinion_statement", "text": "completely fails to grasp even the most basic essence of the franchise - its rhythm, atmosphere, or sense of threat", "color": "#C8E6C9", "startPos": 137, "endPos": 254, "beforeText": "**Page 1**\n&quot;&quot;&quot;\nPredator: Badlands - The Worst Hunt in Franchise History \nIf there&#x27;s ever been a \ufb01lm that carries the name &quot;Predator&quot; yet ", "extractionText": "completely fails to \ngrasp even the most basic essence of the franchise - its rhythm, atmosphere, or \nsense of threat", "afterText": " - that \ufb01lm is undoubtedly Predator: Badlands. At best, it can be \ndescribed as a failed exercise in mimicking a legend - a \ufb01lm devoid of the \nPredato", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Predator: Badlands</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">fails to grasp essence</span>}</div>"}, {"index": 2, "class": "opinion_statement", "text": "a failed exercise in mimicking a legend", "color": "#C8E6C9", "startPos": 334, "endPos": 373, "beforeText": "essence of the franchise - its rhythm, atmosphere, or \nsense of threat - that \ufb01lm is undoubtedly Predator: Badlands. At best, it can be \ndescribed as ", "extractionText": "a failed exercise in mimicking a legend", "afterText": " - a \ufb01lm devoid of the \nPredator&#x27;s spirit, menace, and that primal suspense that de\ufb01ned the originals. \nThe director clearly has no understanding of t", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Predator: Badlands</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">failed exercise</span>}</div>"}, {"index": 3, "class": "opinion_statement", "text": "a \ufb01lm devoid of the Predator's spirit, menace, and that primal suspense that de\ufb01ned the originals", "color": "#C8E6C9", "startPos": 376, "endPos": 474, "beforeText": "osphere, or \nsense of threat - that \ufb01lm is undoubtedly Predator: Badlands. At best, it can be \ndescribed as a failed exercise in mimicking a legend - ", "extractionText": "a \ufb01lm devoid of the \nPredator&#x27;s spirit, menace, and that primal suspense that de\ufb01ned the originals", "afterText": ". \nThe director clearly has no understanding of the Predator universe. In an attempt \nto recreate tension and violence through cheap digital effects a", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Predator: Badlands</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">devoid of spirit, menace, and suspense</span>}</div>"}, {"index": 4, "class": "opinion_statement", "text": "The director clearly has no understanding of the Predator universe", "color": "#C8E6C9", "startPos": 477, "endPos": 543, "beforeText": "bed as a failed exercise in mimicking a legend - a \ufb01lm devoid of the \nPredator&#x27;s spirit, menace, and that primal suspense that de\ufb01ned the originals. \n", "extractionText": "The director clearly has no understanding of the Predator universe", "afterText": ". In an attempt \nto recreate tension and violence through cheap digital effects and noisy framing, \nhe has only produced visual chaos. Scenes that sho", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The director</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">no understanding</span>}</div>"}, {"index": 5, "class": "opinion_statement", "text": "produced visual chaos", "color": "#C8E6C9", "startPos": 655, "endPos": 676, "beforeText": "understanding of the Predator universe. In an attempt \nto recreate tension and violence through cheap digital effects and noisy framing, \nhe has only ", "extractionText": "produced visual chaos", "afterText": ". Scenes that should feel grand or mysterious \nare instead \ufb01lled with illogical lighting, aimless editing, and an overall lack of \nvisual reasoning. T", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">visuals</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">visual chaos</span>}</div>"}, {"index": 6, "class": "opinion_statement", "text": "illogical lighting, aimless editing, and an overall lack of visual reasoning", "color": "#C8E6C9", "startPos": 746, "endPos": 823, "beforeText": "ough cheap digital effects and noisy framing, \nhe has only produced visual chaos. Scenes that should feel grand or mysterious \nare instead \ufb01lled with ", "extractionText": "illogical lighting, aimless editing, and an overall lack of \nvisual reasoning", "afterText": ". The whole thing feels more like a pretentious student project, \nwhere the \ufb01lmmaker has confused &quot;personal style&quot; with &quot;visual disorder.&quot; In \nBadland", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Scenes</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">illogical, aimless, lack of reasoning</span>}</div>"}, {"index": 7, "class": "opinion_statement", "text": "The whole thing feels more like a pretentious student project", "color": "#C8E6C9", "startPos": 825, "endPos": 886, "beforeText": "s. Scenes that should feel grand or mysterious \nare instead \ufb01lled with illogical lighting, aimless editing, and an overall lack of \nvisual reasoning. ", "extractionText": "The whole thing feels more like a pretentious student project", "afterText": ", \nwhere the \ufb01lmmaker has confused &quot;personal style&quot; with &quot;visual disorder.&quot; In \nBadlands, there is no character development, no narrative arc, not eve", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Predator: Badlands</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">pretentious student project</span>}</div>"}, {"index": 8, "class": "opinion_statement", "text": "confused \"personal style\" with \"visual disorder\"", "color": "#C8E6C9", "startPos": 912, "endPos": 959, "beforeText": "ng, aimless editing, and an overall lack of \nvisual reasoning. The whole thing feels more like a pretentious student project, \nwhere the \ufb01lmmaker has ", "extractionText": "confused &quot;personal style&quot; with &quot;visual disorder", "afterText": ".&quot; In \nBadlands, there is no character development, no narrative arc, not even a reason \nto care about what&#x27;s happening. The characters are so shallow", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">the \ufb01lmmaker</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">confused style with disorder</span>}</div>"}, {"index": 9, "class": "opinion_statement", "text": "no character development, no narrative arc, not even a reason to care about what's happening", "color": "#C8E6C9", "startPos": 985, "endPos": 1078, "beforeText": "thing feels more like a pretentious student project, \nwhere the \ufb01lmmaker has confused &quot;personal style&quot; with &quot;visual disorder.&quot; In \nBadlands, there is ", "extractionText": "no character development, no narrative arc, not even a reason \nto care about what&#x27;s happening", "afterText": ". The characters are so shallow and faceless that \nby the \ufb01lm&#x27;s midpoint, the audience has stopped caring whether they live or die. \nThe dialogue is a", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Predator: Badlands</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">no development, arc, or reason to care</span>}</div>"}, {"index": 10, "class": "opinion_statement", "text": "The characters are so shallow and faceless", "color": "#C8E6C9", "startPos": 1080, "endPos": 1122, "beforeText": " style&quot; with &quot;visual disorder.&quot; In \nBadlands, there is no character development, no narrative arc, not even a reason \nto care about what&#x27;s happening. ", "extractionText": "The characters are so shallow and faceless", "afterText": " that \nby the \ufb01lm&#x27;s midpoint, the audience has stopped caring whether they live or die. \nThe dialogue is arti\ufb01cial, lifeless, and often laughable - as", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The characters</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">shallow and faceless</span>}</div>"}, {"index": 11, "class": "audience_impact", "text": "the audience has stopped caring whether they live or die", "color": "#D2E3FC", "startPos": 1152, "endPos": 1208, "beforeText": "lopment, no narrative arc, not even a reason \nto care about what&#x27;s happening. The characters are so shallow and faceless that \nby the \ufb01lm&#x27;s midpoint, ", "extractionText": "the audience has stopped caring whether they live or die", "afterText": ". \nThe dialogue is arti\ufb01cial, lifeless, and often laughable - as if written by an AI that \nhas never actually seen an action movie. \nThe Predator itse", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">apathetic</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">shallow and faceless characters</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}, {"index": 12, "class": "opinion_statement", "text": "The dialogue is arti\ufb01cial, lifeless, and often laughable", "color": "#C8E6C9", "startPos": 1211, "endPos": 1267, "beforeText": " what&#x27;s happening. The characters are so shallow and faceless that \nby the \ufb01lm&#x27;s midpoint, the audience has stopped caring whether they live or die. \n", "extractionText": "The dialogue is arti\ufb01cial, lifeless, and often laughable", "afterText": " - as if written by an AI that \nhas never actually seen an action movie. \nThe Predator itself - the symbol of the ultimate hunter - looks more like a ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The dialogue</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">artificial, lifeless, and laughable</span>}</div>"}, {"index": 13, "class": "opinion_statement", "text": "as if written by an AI that has never actually seen an action movie", "color": "#C8E6C9", "startPos": 1270, "endPos": 1338, "beforeText": "ss that \nby the \ufb01lm&#x27;s midpoint, the audience has stopped caring whether they live or die. \nThe dialogue is arti\ufb01cial, lifeless, and often laughable - ", "extractionText": "as if written by an AI that \nhas never actually seen an action movie", "afterText": ". \nThe Predator itself - the symbol of the ultimate hunter - looks more like a person \nin a plastic Halloween costume. The production design and visua", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The dialogue</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">written by an AI</span>}</div>"}, {"index": 14, "class": "opinion_statement", "text": "looks more like a person in a plastic Halloween costume", "color": "#C8E6C9", "startPos": 1399, "endPos": 1455, "beforeText": "nd often laughable - as if written by an AI that \nhas never actually seen an action movie. \nThe Predator itself - the symbol of the ultimate hunter - ", "extractionText": "looks more like a person \nin a plastic Halloween costume", "afterText": ". The production design and visual effects are so \nweak that it constantly feels like a cheap &#x27;90s TV movie. Instead of inspiring fear, \nthe \ufb01lm turns", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The Predator</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">like a Halloween costume</span>}</div>"}, {"index": 15, "class": "opinion_statement", "text": "The production design and visual effects are so weak", "color": "#C8E6C9", "startPos": 1457, "endPos": 1510, "beforeText": "r actually seen an action movie. \nThe Predator itself - the symbol of the ultimate hunter - looks more like a person \nin a plastic Halloween costume. ", "extractionText": "The production design and visual effects are so \nweak", "afterText": " that it constantly feels like a cheap &#x27;90s TV movie. Instead of inspiring fear, \nthe \ufb01lm turns the Predator into a visual joke - a creature that no l", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The production design and visual effects</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">so weak</span>}</div>"}, {"index": 16, "class": "opinion_statement", "text": "it constantly feels like a cheap '90s TV movie", "color": "#C8E6C9", "startPos": 1516, "endPos": 1562, "beforeText": " symbol of the ultimate hunter - looks more like a person \nin a plastic Halloween costume. The production design and visual effects are so \nweak that ", "extractionText": "it constantly feels like a cheap &#x27;90s TV movie", "afterText": ". Instead of inspiring fear, \nthe \ufb01lm turns the Predator into a visual joke - a creature that no longer frightens, \nbut amuses. \nThe performances are ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Predator: Badlands</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">cheap &#x27;90s TV movie</span>}</div>"}, {"index": 17, "class": "opinion_statement", "text": "turns the Predator into a visual joke", "color": "#C8E6C9", "startPos": 1600, "endPos": 1637, "beforeText": "stume. The production design and visual effects are so \nweak that it constantly feels like a cheap &#x27;90s TV movie. Instead of inspiring fear, \nthe \ufb01lm ", "extractionText": "turns the Predator into a visual joke", "afterText": " - a creature that no longer frightens, \nbut amuses. \nThe performances are directionless; there&#x27;s no sense of control or dramatic \nunderstanding. Ever", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Predator: Badlands</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">visual joke</span>}</div>"}, {"index": 18, "class": "opinion_statement", "text": "a creature that no longer frightens, but amuses", "color": "#C8E6C9", "startPos": 1640, "endPos": 1688, "beforeText": "effects are so \nweak that it constantly feels like a cheap &#x27;90s TV movie. Instead of inspiring fear, \nthe \ufb01lm turns the Predator into a visual joke - ", "extractionText": "a creature that no longer frightens, \nbut amuses", "afterText": ". \nThe performances are directionless; there&#x27;s no sense of control or dramatic \nunderstanding. Every move and reaction feels clich\u00e9d and hollow, and i", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The Predator</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">no longer frightens, but amuses</span>}</div>"}, {"index": 19, "class": "opinion_statement", "text": "The performances are directionless", "color": "#C8E6C9", "startPos": 1691, "endPos": 1725, "beforeText": "a cheap &#x27;90s TV movie. Instead of inspiring fear, \nthe \ufb01lm turns the Predator into a visual joke - a creature that no longer frightens, \nbut amuses. \n", "extractionText": "The performances are directionless", "afterText": "; there&#x27;s no sense of control or dramatic \nunderstanding. Every move and reaction feels clich\u00e9d and hollow, and in \nmoments meant to evoke fear or ten", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The performances</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">directionless</span>}</div>"}, {"index": 20, "class": "opinion_statement", "text": "no sense of control or dramatic understanding", "color": "#C8E6C9", "startPos": 1735, "endPos": 1781, "beforeText": "fear, \nthe \ufb01lm turns the Predator into a visual joke - a creature that no longer frightens, \nbut amuses. \nThe performances are directionless; there&#x27;s ", "extractionText": "no sense of control or dramatic \nunderstanding", "afterText": ". Every move and reaction feels clich\u00e9d and hollow, and in \nmoments meant to evoke fear or tension, the only thing that comes across is \nconfusion. \nP", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The performances</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">no control or understanding</span>}</div>"}, {"index": 21, "class": "opinion_statement", "text": "Every move and reaction feels clich\u00e9d and hollow", "color": "#C8E6C9", "startPos": 1783, "endPos": 1831, "beforeText": "joke - a creature that no longer frightens, \nbut amuses. \nThe performances are directionless; there&#x27;s no sense of control or dramatic \nunderstanding. ", "extractionText": "Every move and reaction feels clich\u00e9d and hollow", "afterText": ", and in \nmoments meant to evoke fear or tension, the only thing that comes across is \nconfusion. \nPredator: Badlands isn&#x27;t just a bad movie - it&#x27;s an", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Every move and reaction</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">clich\u00e9d and hollow</span>}</div>"}, {"index": 22, "class": "audience_impact", "text": "the only thing that comes across is confusion", "color": "#D2E3FC", "startPos": 1881, "endPos": 1927, "beforeText": "e&#x27;s no sense of control or dramatic \nunderstanding. Every move and reaction feels clich\u00e9d and hollow, and in \nmoments meant to evoke fear or tension, ", "extractionText": "the only thing that comes across is \nconfusion", "afterText": ". \nPredator: Badlands isn&#x27;t just a bad movie - it&#x27;s an outright assault on the \ncinematic legacy of the franchise. The director has proven he neither ", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">confusion</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">moments meant to evoke fear or tension</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}, {"index": 23, "class": "opinion_statement", "text": "isn't just a bad movie", "color": "#C8E6C9", "startPos": 1949, "endPos": 1971, "beforeText": "eaction feels clich\u00e9d and hollow, and in \nmoments meant to evoke fear or tension, the only thing that comes across is \nconfusion. \nPredator: Badlands ", "extractionText": "isn&#x27;t just a bad movie", "afterText": " - it&#x27;s an outright assault on the \ncinematic legacy of the franchise. The director has proven he neither respects \nthe mythos of Predator nor possess", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Predator: Badlands</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">bad movie</span>}</div>"}, {"index": 24, "class": "opinion_statement", "text": "an outright assault on the cinematic legacy of the franchise", "color": "#C8E6C9", "startPos": 1979, "endPos": 2040, "beforeText": "ow, and in \nmoments meant to evoke fear or tension, the only thing that comes across is \nconfusion. \nPredator: Badlands isn&#x27;t just a bad movie - it&#x27;s ", "extractionText": "an outright assault on the \ncinematic legacy of the franchise", "afterText": ". The director has proven he neither respects \nthe mythos of Predator nor possesses the ability to create something new within \nit. He has reduced the", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Predator: Badlands</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">outright assault</span>}</div>"}, {"index": 25, "class": "opinion_statement", "text": "neither respects the mythos of Predator nor possesses the ability to create something new within it", "color": "#C8E6C9", "startPos": 2069, "endPos": 2170, "beforeText": "onfusion. \nPredator: Badlands isn&#x27;t just a bad movie - it&#x27;s an outright assault on the \ncinematic legacy of the franchise. The director has proven he ", "extractionText": "neither respects \nthe mythos of Predator nor possesses the ability to create something new within \nit", "afterText": ". He has reduced the Predator brand to the level of a dull YouTube video, \nsquandering both audience trust and studio credibility.\n&quot;&quot;&quot;\n\n**Page 2**\n&quot;&quot;&quot;", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The director</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">neither respects nor possesses the ability</span>}</div>"}, {"index": 26, "class": "opinion_statement", "text": "reduced the Predator brand to the level of a dull YouTube video", "color": "#C8E6C9", "startPos": 2179, "endPos": 2242, "beforeText": "e franchise. The director has proven he neither respects \nthe mythos of Predator nor possesses the ability to create something new within \nit. He has ", "extractionText": "reduced the Predator brand to the level of a dull YouTube video", "afterText": ", \nsquandering both audience trust and studio credibility.\n&quot;&quot;&quot;\n\n**Page 2**\n&quot;&quot;&quot;\nIf there&#x27;s any respect left for the name Predator, the \ufb01rst step should", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The director</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">reduced to the level of a dull YouTube video</span>}</div>"}, {"index": 27, "class": "audience_impact", "text": "squandering both audience trust and studio credibility", "color": "#D2E3FC", "startPos": 2245, "endPos": 2299, "beforeText": "os of Predator nor possesses the ability to create something new within \nit. He has reduced the Predator brand to the level of a dull YouTube video, \n", "extractionText": "squandering both audience trust and studio credibility", "afterText": ".\n&quot;&quot;&quot;\n\n**Page 2**\n&quot;&quot;&quot;\nIf there&#x27;s any respect left for the name Predator, the \ufb01rst step should be removing \nthis director from any future projects - pe", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">disappointment, distrust</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The director&#x27;s actions</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">audience and studio</span>}</div>"}, {"index": 28, "class": "opinion_statement", "text": "removing this director from any future projects - permanently", "color": "#C8E6C9", "startPos": 2396, "endPos": 2458, "beforeText": "quandering both audience trust and studio credibility.\n&quot;&quot;&quot;\n\n**Page 2**\n&quot;&quot;&quot;\nIf there&#x27;s any respect left for the name Predator, the \ufb01rst step should be ", "extractionText": "removing \nthis director from any future projects - permanently", "afterText": ".\n&quot;&quot;&quot;\n\n", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The director</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">removing from any future projects - permanently</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>
